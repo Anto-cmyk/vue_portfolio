@@ -14,11 +14,12 @@ import { Icon } from "@iconify/vue";
       <div class="flex items-center gap-6">
         <!-- GitHub -->
         <a
-          href="https://github.com/anto-cymk"
+          href="https://github.com/anto-cmyk/"
           target="_blank"
-          class="hover:text-white transition"
+          rel="noopener noreferrer"
+          class="hover:text-white transition-colors duration-200"
         >
-          <Icon icon="mdi:github" class="text-3xl" />
+          <Icon icon="mdi:github" class="text-3xl text-gray-300 hover:text-white" />
         </a>
 
         <!-- LinkedIn -->

@@ -7,21 +7,40 @@ const projects = [
     title: "Portfolio Website",
     description: "A modern portfolio built with Vue and TailwindCSS.",
     icon: "mdi:web",
-    link: "https://github.com/Anto-cymk/vue_portfolio.git",
+    link: "https://github.com/Anto-cmyk/vue_portfolio", //public github repo
+    private: false,
   },
   {
     title: "Job Searching Website",
     description:
       "A clean and user friendly website for connecting job seekers to employers build with php.",
     icon: "mdi:check-circle-outline",
-    link: "https://myjobs.free.nf/",
+    link: "https://myjobs.free.nf/", //public website
+    private: false,
   },
   {
     title: "HTML portfolio",
     description:
       "A simple html/css/js portfolio that gave me a solid understanding foundation of web programming.",
     icon: "mdi:chart-line",
-    link: "https://mwangiantony.kesug.com/",
+    link: "https://mwangiantony.kesug.com/", //public website
+    private: false,
+  },
+  {
+    title: "React-Express House Searching Web",
+    description:
+      "A full stack web application built with React,Mysql,Mongo Db,Tailwind CSS and Express for searching houses.",
+    icon: "mdi:home-outline",
+    link: "/private-repo", //private repo, not accessible to public
+    private: true,
+  },
+  {
+    title: "Laravel Ecommerce Website",
+    description:
+      "A full stack ecommerce website built with Laravel, MySQL and Tailwind CSS.",
+    icon: "mdi:shopping-outline",
+    link: "/private-repo", //private repo, not accessible to public
+    private: true,
   },
 ];
 </script>
@@ -53,7 +72,17 @@ const projects = [
           </p>
 
           <!-- Visit Button -->
+          <router-link
+            v-if="project.private"
+            :to="project.link"
+            class="inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
+          >
+            Visit Project
+            <Icon icon="material-symbols:arrow-right-alt-rounded" class="text-xl" />
+          </router-link>
+
           <a
+            v-else
             :href="project.link"
             target="_blank"
             class="inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
