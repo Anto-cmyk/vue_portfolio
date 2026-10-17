@@ -15,6 +15,7 @@ const projects = [
     link: "https://github.com/Anto-cmyk/vue_portfolio",
     linkLabel: "View Source",
   },
+
   {
     title: "Job Searching Website",
     category: "Web Application",
@@ -38,7 +39,16 @@ const projects = [
   linkLabel: "Visit Website",
 },
 
-
+{
+  title: "LoveConnect – Dating & Relationship Platform",
+  category: "Full-Stack Development",
+  description:
+    "A responsive dating and relationship platform built with Angular, Tailwind CSS, and Firebase, featuring user authentication, email verification, profile management, and privacy-focused account access.",
+  icon: "mdi:heart-multiple",
+  technologies: ["Angular", "TypeScript", "Tailwind CSS", "Firebase", "Firestore"],
+  link: "https://findwife.web.app/",
+  linkLabel: "View Live",
+},
   
 {
   title: "Agricultural Products Marketplace",
